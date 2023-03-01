@@ -8,20 +8,18 @@ public class EmployeeWage {
         final int WAGE_PER_HR = 20;
         int empType = (int) (Math.random() * 100) % 3;
         int workingHours = 0;
-        if (empType == FULL_TIME)
-        {
+        if (empType == FULL_TIME) {
             System.out.println("Employee is Present Full time");
             workingHours = 8;
-        } else if (empType == PART_TIME)
-        {
+        } else if (empType == PART_TIME) {
             System.out.println("Employee is Present Part time");
             workingHours = 4;
-        } else
-        {
+        } else {
             System.out.println("Employee is Absent");
         }
         int wage = workingHours * WAGE_PER_HR;
         System.out.println("Employee Daily Wage is " + wage);
+
     }
 }
 
