@@ -6,11 +6,14 @@ public class EmployeeWage {
         final int FULL_TIME = 2;
         final int PART_TIME = 1;
         final int WAGE_PER_HR = 20;
-        final int WORKING_DAYS=20;
+        final int MAX_WORKING_DAYS = 20;
+        final int MAX_WORKING_HRS = 100;
         int totalWage = 0;
-        for (int day = 1; day <= WORKING_DAYS; day++) {
-        int empType = (int) (Math.random() * 100) % 3;
-        int workingHours = 0;
+        int workingHours=0;
+        for (int day = 1, totalWorkingHrs = 0; day <= MAX_WORKING_DAYS
+                && totalWorkingHrs < MAX_WORKING_HRS; day++, totalWorkingHrs += workingHours) {
+            int empType = (int) (Math.random() * 100) % 3;
+
             switch (empType) {
                 case FULL_TIME:
                     System.out.println("Employee is Present Full time");
@@ -22,14 +25,13 @@ public class EmployeeWage {
                     break;
                 default:
                     System.out.println("Employee is Absent");
-
+                    workingHours = 0;
+                    break;
             }
             int wage = workingHours * WAGE_PER_HR;
-            System.out.println("Day " + day + " wage is:" + wage);
-
-
-        totalWage += wage;
-    }
+            totalWage += wage;
+            System.out.printf("%5d       %5d      %5d      %5d\n", day, workingHours, wage, totalWorkingHrs + workingHours);
+        }
         System.out.println("Total wage for a month is " + totalWage);
     }
 }
