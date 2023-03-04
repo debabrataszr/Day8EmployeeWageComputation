@@ -1,22 +1,23 @@
 package com.bridgelabz;
 
 
+import java.util.ArrayList;
+
 public class EmployeeWage implements IEmployeeWage {
     // class constants
     public static final int PART_TIME = 1;
     public static final int FULL_TIME = 2;
     // instance variables
-    int noOfCompanies, index;
-    CompanyEmpWage[] companies;
+    ArrayList<CompanyEmpWage> companies;
 
-    public EmployeeWage(int noOfCompanies) {
-        this.noOfCompanies = noOfCompanies;
-        companies = new CompanyEmpWage[noOfCompanies];
-        index = 0;
+    public EmployeeWage()
+    {
+        companies = new ArrayList<>();
     }
 
     public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs) {
-        companies[index++] = new CompanyEmpWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
+        CompanyEmpWage company = new CompanyEmpWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
+        companies.add(company);
     }
 
     int generateEmployeeType() {
@@ -60,10 +61,11 @@ public class EmployeeWage implements IEmployeeWage {
     }
 
     public static void main(String args[]) {
-        EmployeeWage employeeWage = new EmployeeWage(3);
+        EmployeeWage employeeWage = new EmployeeWage();
         employeeWage.addCompany("Microsoft", 450, 30, 100);
         employeeWage.addCompany("Google", 850, 40, 170);
         employeeWage.addCompany("Apple", 950, 20, 70);
+        employeeWage.addCompany("Amazon", 1050, 25, 80);
         employeeWage.calculateTotalWage();
     }
 

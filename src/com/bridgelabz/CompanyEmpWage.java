@@ -30,7 +30,8 @@ public class CompanyEmpWage {
         System.err.println("Wage per hour:" + WAGE_PER_HR);
         System.out.println("Maximum working days:" + MAX_WORKING_DAYS);
         System.out.println("Maximum working hours:" + MAX_WORKING_HRS);
-        return("Total wage for a month of " + COMPANY_NAME + " employee is " + totalEmpWage + "\n");
+        return "Total wage for a month of " + COMPANY_NAME + " employee is " + totalEmpWage + "\n";
     }
 }
+
 
