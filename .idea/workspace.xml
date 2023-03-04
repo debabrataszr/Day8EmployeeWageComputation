@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b8fd709-887b-4dbe-a160-91f949890fe8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/bridgelabz/CompanyEmpWage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/bridgelabz/EmployeeWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bridgelabz/EmployeeWage.java" afterDir="false" />
     </list>
