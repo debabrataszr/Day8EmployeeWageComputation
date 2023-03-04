@@ -5,7 +5,6 @@ public class CompanyEmpWage {
     final int WAGE_PER_HR;
     final int MAX_WORKING_DAYS;
     final int MAX_WORKING_HRS;
-    // instance variable
     int totalEmpWage;
 
     CompanyEmpWage(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs)
